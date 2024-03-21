@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-import 'package:sqflite/sqflite.dart';
 import 'package:tahaelectronic/API/localAPI/local_api_helper.dart';
 import 'package:tahaelectronic/models/order.dart';
 
@@ -14,11 +13,11 @@ class OrderController extends GetxController {
 
   void loadOrder() async {
     orderlist.value = await orders();
-    print(orderlist.value);
+
     update();
   }
 
-  void SearchOrder(String query) async {
+  void searchOrder(String query) async {
     orderlist.value = await orders();
 
     update();

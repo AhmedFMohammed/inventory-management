@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tahaelectronic/API/orderAPI.dart';
-import 'package:tahaelectronic/API/productsapi.dart';
 import 'package:tahaelectronic/controllers/orderController.dart';
 import 'package:tahaelectronic/controllers/productController.dart';
 import 'package:tahaelectronic/models/order.dart';

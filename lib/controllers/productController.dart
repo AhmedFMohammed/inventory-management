@@ -17,7 +17,7 @@ class ProductController extends GetxController {
     update();
   }
 
-  void SearchProducts(String query) async {
+  void searchProducts(String query) async {
     productlist.value = await products();
     productlist.value = productlist.value
         .where((e) => e.title!.toLowerCase().contains(query.toLowerCase()))

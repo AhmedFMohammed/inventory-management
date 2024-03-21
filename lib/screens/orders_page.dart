@@ -5,10 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:open_file/open_file.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:tahaelectronic/API/deliveryAPI.dart';
 import 'package:tahaelectronic/API/localAPI/local_api_helper.dart';
-import 'package:tahaelectronic/API/orderAPI.dart';
-import 'package:tahaelectronic/API/productsapi.dart';
 import 'package:tahaelectronic/controllers/orderController.dart';
 import 'package:tahaelectronic/controllers/productController.dart';
 import 'package:tahaelectronic/models/delivery.dart';
@@ -17,7 +14,6 @@ import 'package:tahaelectronic/screens/add_order_item_to_order.dart';
 import 'package:tahaelectronic/screens/home_page.dart';
 
 import 'package:pdf/widgets.dart' as pw;
-import 'package:url_launcher/url_launcher.dart';
 
 import '../models/order.dart';
 
@@ -122,29 +118,26 @@ class _OrderPageState extends State<OrderPage> {
                           children: [
                             IconButton(
                                 onPressed: () {
-                                   
                                   Navigator.pop(context);
                                 },
                                 icon:
                                     const Icon(Icons.arrow_back_ios_outlined)),
-                            
-                                ElevatedButton(
-                                    onPressed: () {
-                                      // show dialog
-                                      List<DropdownMenuItem<String>> list =
-                                          deliverylist.map(
-                                        (e) {
-                                          return DropdownMenuItem(
-                                            value: "${e.city}",
-                                            child: Text(e.city!),
-                                          );
-                                        },
-                                      ).toList();
-                                      _dialogBuilder(context, list);
-                                      Get.find<OrderController>().loadOrder();
+                            ElevatedButton(
+                                onPressed: () {
+                                  // show dialog
+                                  List<DropdownMenuItem<String>> list =
+                                      deliverylist.map(
+                                    (e) {
+                                      return DropdownMenuItem(
+                                        value: "${e.city}",
+                                        child: Text(e.city!),
+                                      );
                                     },
-                                    child: const Text("Add")),
-                              
+                                  ).toList();
+                                  _dialogBuilder(context, list);
+                                  Get.find<OrderController>().loadOrder();
+                                },
+                                child: const Text("Add")),
                           ],
                         ),
                       ),
@@ -274,7 +267,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                               "$total",
                             ];
                           }).toList();
-                          print(order.city);
+
                           var delivery = deliverylist
                               .where((e) => e.city == order.city)
                               .first;
@@ -302,10 +295,10 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                         pw.CrossAxisAlignment.start,
                                     children: [
                                       pw.Text("Taha Electronic"),
-                                      pw.Text("name :${order?.name}"),
-                                      pw.Text("location : ${order?.location}"),
+                                      pw.Text("name :${order.name}"),
+                                      pw.Text("location : ${order.location}"),
                                       pw.Text(
-                                          "description: ${order?.description}"),
+                                          "description: ${order.description}"),
                                     ],
                                   ),
                                 pw.Container(height: 10),

@@ -4,10 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:sqflite/sqflite.dart';
 import 'package:tahaelectronic/API/localAPI/local_api_helper.dart';
-import 'package:tahaelectronic/API/orderAPI.dart';
-import 'package:tahaelectronic/API/productsapi.dart';
 import 'package:tahaelectronic/controllers/orderController.dart';
 import 'package:tahaelectronic/controllers/productController.dart';
 import 'package:tahaelectronic/models/order.dart';
@@ -64,7 +61,7 @@ class _HomePageState extends State<HomePage> {
                                     borderRadius: BorderRadius.circular(25))),
                             onChanged: (value) {
                               Get.find<ProductController>()
-                                  .SearchProducts(value);
+                                  .searchProducts(value);
                             }, // search for products
                           ),
                         ),
