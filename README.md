@@ -24,7 +24,7 @@ To run this application locally, make sure you have Flutter installed. Then, fol
 1. Clone this repository to your local machine:
 
 ```bash
-   git clone https://github.com/your-username/inventory-management.git
+   git clone https://github.com/AhmedFMohammed/inventory-management.git
 ```
 2. Navigate to the project directory:
 
