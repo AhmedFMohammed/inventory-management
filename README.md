@@ -14,8 +14,9 @@ This is a Dart Flutter application for managing inventory and sales of products.
 ### Built With
  
 
-* ![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)
-* ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
+* [![Flutter][flutter]][flutter-url]
+* [![SQLite][SQLite]][SQLite-url]
+
 
  ## Installation
 
@@ -64,3 +65,13 @@ This project is licensed under the [MIT License](LICENSE).
 ## Contact
 
 For any inquiries or support, please contact [Ahmed Falah](mailto:ahmed.f.mohammed48@gmail.com).
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[flutter]:  https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white
+[flutter-url]:  https://docs.flutter.dev/get-started/install
+[SQLite]:   https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white
+[SQLite-url]:  https://pub.dev/packages/sqflite
+
+
+
